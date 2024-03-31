@@ -31,7 +31,7 @@ async function getp2pTransactions() {
     },
   });
 
-  return txns.map((t) => ({
+  return txns.map((t: any) => ({
     fromUserId: t.fromUserId,
     fromUserName: t.fromUser.name || "",
     toUserId: t.toUserId,
