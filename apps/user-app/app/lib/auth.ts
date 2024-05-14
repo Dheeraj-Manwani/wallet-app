@@ -56,6 +56,14 @@ export const authOptions = {
             },
           });
 
+          await db.balanceAudit.create({
+            data: {
+              userId: user.id,
+              Balance: 0,
+              date: new Date(),
+            },
+          });
+
           return {
             id: user.id.toString(),
             name: user.name,
